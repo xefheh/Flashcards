@@ -1,0 +1,72 @@
+* {
+    background-color: azure;
+    font-family: 'Poppins', sans-serif;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: blue;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100vh;
+    border-radius: 20px;
+    position: center;
+}
+
+.item {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    margin: 6px;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    position: absolute;
+    backface-visibility: hidden;
+    z-index: 3;
+    border-radius: 20px;
+}
+
+.back {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+    position: absolute;
+    z-index: 2;
+    transform: rotateY(180deg);
+    border-radius: 20px;
+}
+
+.back p {
+    text-align: center;
+    background-color: yellow;
+}
+
+.front p {
+    text-align: center;
+    background-color: red;
+}
+
+.item:hover {
+    transform: rotateY(180deg);
+}
